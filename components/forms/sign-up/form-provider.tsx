@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
 import { Loader } from '@/components/loader';
 import { AuthContextProvider } from "@/context/use-auth-context";

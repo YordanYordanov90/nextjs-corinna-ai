@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from "tailwindcss";
 
 const config = {
@@ -11,7 +12,7 @@ const config = {
   prefix: "",
   theme: {
   	container: {
-  		center: 'true',
+  		center: true,
   		padding: '2rem',
   		screens: {
   			'2xl': '1400px'
@@ -127,7 +128,7 @@ const config = {
   					opacity: '1'
   				}
   			},
-  			'accordion-down': {
+  			accordionDown: {
   				from: {
   					height: '0'
   				},
@@ -135,7 +136,7 @@ const config = {
   					height: 'var(--radix-accordion-content-height)'
   				}
   			},
-  			'accordion-up': {
+  			accordionUp: {
   				from: {
   					height: 'var(--radix-accordion-content-height)'
   				},
@@ -145,15 +146,13 @@ const config = {
   			}
   		},
   		animation: {
-  			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out',
-  			'caret-blink': 'caret-blink 1.25s ease-out infinite',
-  			'open-sidebar': 'open-sidebar 0.2s ease-out',
-  			'close-sidebar': 'close-sidebar 0.2s ease-out',
-  			'fade-in': 'fade-in 0.2s ease-out',
-  			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
-  		}
+			'accordion-down': 'accordion-down 0.2s ease-out',
+			'accordion-up': 'accordion-up 0.2s ease-out',
+			'caret-blink': 'caret-blink 1.25s ease-out infinite',
+			'open-sidebar': 'open-sidebar 0.2s ease-out',
+			'close-sidebar': 'close-sidebar 0.2s ease-out',
+			'fade-in': 'fade-in 0.2s ease-out'
+		  }
   	}
   },
   plugins: [require("tailwindcss-animate")],
