@@ -6,6 +6,7 @@ import { client } from "@/lib/prisma";
 // import { onGetAllAccountDomains } from '../settings'
 import { currentUser } from "@clerk/nextjs/server";
 import { RedirectToSignIn } from "@clerk/nextjs";
+import { onGetAllAccountDomains } from '../settings';
 
 export const onCompleteUserRegistration = async (
   fullname: string,
@@ -39,7 +40,7 @@ export const onCompleteUserRegistration = async (
 
 export const onLoginUser = async () => {
   const user = await currentUser();
-  if (!user) RedirectToSignIn({ redirectUrl: "/sign-in" });
+  if (!user)  RedirectToSignIn();
   else {
     try {
       const authenticated = await client.user.findUnique({
@@ -52,16 +53,12 @@ export const onLoginUser = async () => {
           type: true,
         },
       });
-    //   if (authenticated) {
-    //     const domains = await onGetAllAccountDomains();
-    //     return { status: 200, user: authenticated, domain: domains?.domains };
-    //   }
-    // } catch (error) {
-    //   return { status: 400 };
-    // }
+      if (authenticated) {
+        const domains = await onGetAllAccountDomains();
+        return { status: 200, user: authenticated, domain: domains?.domains };
+      }
+    } catch (error) {
+      return { status: 400 };
+    }
   }
-  catch (error) {
-    return { status: 400 };
-  }
-}
 };

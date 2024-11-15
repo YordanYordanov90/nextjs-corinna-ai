@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import Link from "next/link";
+import { ModeToggle } from '../ui/modtoggle';
 
 function NavBar() {
   return (
@@ -27,12 +28,16 @@ function NavBar() {
         <li>Features</li>
         <li>Contact us</li>
       </ul>
+      <div className='flex gap-3 items-center'>
+
+      <ModeToggle />
       <Link
         href="/dashboard"
         className="bg-orange px-4 py-2 rounded-sm text-white"
-      >
+        >
         Free Trial
       </Link>
+        </div>
     </div>
   );
 }
