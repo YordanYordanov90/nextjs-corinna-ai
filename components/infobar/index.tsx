@@ -6,9 +6,9 @@ import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 
 const InfoBar = () => {
   return (
-    <div className="flex w-full justify-between items-center py-1 mb-8 ">
+    <div className="flex w-full justify-between border-b  py-2 mb-8 ">
       <BreadCrums />
-      <div className="flex gap-3 items-center">
+      <div className="flex gap-3">
         <div>
           <Card className="rounded-xl flex gap-3 py-3 px-4 text-ghost">
             <Trash />

@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import Link from "next/link";
-import { ModeToggle } from '../ui/modtoggle';
+
 
 function NavBar() {
   return (
@@ -30,7 +30,7 @@ function NavBar() {
       </ul>
       <div className='flex gap-3 items-center'>
 
-      <ModeToggle />
+      
       <Link
         href="/dashboard"
         className="bg-orange px-4 py-2 rounded-sm text-white"

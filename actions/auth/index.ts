@@ -3,7 +3,7 @@
 
 import { client } from "@/lib/prisma";
 
-// import { onGetAllAccountDomains } from '../settings'
+
 import { currentUser } from "@clerk/nextjs/server";
 import { RedirectToSignIn } from "@clerk/nextjs";
 import { onGetAllAccountDomains } from '../settings';
@@ -40,7 +40,7 @@ export const onCompleteUserRegistration = async (
 
 export const onLoginUser = async () => {
   const user = await currentUser();
-  if (!user)  RedirectToSignIn();
+  if (!user)  RedirectToSignIn({redirectUrl: '/dashboard/settings'});
   else {
     try {
       const authenticated = await client.user.findUnique({

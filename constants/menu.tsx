@@ -1,50 +1,56 @@
-import CalIcon from '@/icons/cal-icon'
+
 import ChatIcon from '@/icons/chat-icon'
-import DashboardIcon from '@/icons/dashboard-icon'
+
 import EmailIcon from '@/icons/email-icon'
 import HelpDeskIcon from '@/icons/help-desk-icon'
-import IntegrationsIcon from '@/icons/integrations-icon'
-import SettingsIcon from '@/icons/settings-icon'
+
 import StarIcon from '@/icons/star-icon'
 import TimerIcon from '@/icons/timer-icon'
-import { ReactNode } from 'react'
+import { MdOutlineDashboard } from "react-icons/md";
+import { CiChat1 } from "react-icons/ci";
+import { GrIntegration } from "react-icons/gr";
+import { CiSettings } from "react-icons/ci";
+import { CiCalendarDate } from "react-icons/ci";
+import { MdOutlineEmail } from "react-icons/md";
+
+
 
 
 type SIDE_BAR_MENU_PROPS = {
   label: string
-  icon: ReactNode  
+  icon: JSX.Element 
   path: string
 }
 
 export const SIDE_BAR_MENU: SIDE_BAR_MENU_PROPS[] = [
   {
     label: 'Dashboard',
-    icon:  <DDashboardIcon />,
+    icon:  <MdOutlineDashboard size={20}/>,
     path: 'dashboard',
   },
   {
     label: 'Conversations',
-    icon: <ChatIcon />,
+    icon: <CiChat1 size={20} />,
     path: 'conversation',
   },
   {
     label: 'Integrations',
-    icon: <IntegrationsIcon />,
+    icon: <GrIntegration size={20} />,
     path: 'integration',
   },
   {
     label: 'Settings',
-    icon: <SettingsIcon />,
+    icon: <CiSettings size={20} />,
     path: 'settings',
   },
   {
     label: 'Appointments',
-    icon: <CalIcon />,
+    icon: <CiCalendarDate size={20} />,
     path: 'appointment',
   },
   {
     label: 'Email Marketing',
-    icon: <EmailIcon />,
+    icon: <MdOutlineEmail size={20} />,
     path: 'email-marketing',
   },
 ]
