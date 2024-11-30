@@ -1,109 +1,103 @@
+import ChatIcon from "@/icons/chat-icon";
 
-import ChatIcon from '@/icons/chat-icon'
+import HelpDeskIcon from "@/icons/help-desk-icon";
 
-import EmailIcon from '@/icons/email-icon'
-import HelpDeskIcon from '@/icons/help-desk-icon'
-
-import StarIcon from '@/icons/star-icon'
-import TimerIcon from '@/icons/timer-icon'
-import { MdOutlineDashboard } from "react-icons/md";
+import { MdOutlineDashboard, MdStar } from "react-icons/md";
 import { CiChat1 } from "react-icons/ci";
 import { GrIntegration } from "react-icons/gr";
 import { CiSettings } from "react-icons/ci";
 import { CiCalendarDate } from "react-icons/ci";
 import { MdOutlineEmail } from "react-icons/md";
-
-
-
+import { TimerIcon } from "lucide-react";
 
 type SIDE_BAR_MENU_PROPS = {
-  label: string
-  icon: JSX.Element 
-  path: string
-}
+  label: string;
+  icon: JSX.Element;
+  path: string;
+};
 
 export const SIDE_BAR_MENU: SIDE_BAR_MENU_PROPS[] = [
   {
-    label: 'Dashboard',
-    icon:  <MdOutlineDashboard size={20}/>,
-    path: 'dashboard',
+    label: "Dashboard",
+    icon: <MdOutlineDashboard size={20} />,
+    path: "dashboard",
   },
   {
-    label: 'Conversations',
+    label: "Conversations",
     icon: <CiChat1 size={20} />,
-    path: 'conversation',
+    path: "conversation",
   },
   {
-    label: 'Integrations',
+    label: "Integrations",
     icon: <GrIntegration size={20} />,
-    path: 'integration',
+    path: "integration",
   },
   {
-    label: 'Settings',
+    label: "Settings",
     icon: <CiSettings size={20} />,
-    path: 'settings',
+    path: "settings",
   },
   {
-    label: 'Appointments',
+    label: "Appointments",
     icon: <CiCalendarDate size={20} />,
-    path: 'appointment',
+    path: "appointment",
   },
   {
-    label: 'Email Marketing',
+    label: "Email Marketing",
     icon: <MdOutlineEmail size={20} />,
-    path: 'email-marketing',
+    path: "email-marketing",
   },
-]
+];
 
 type TABS_MENU_PROPS = {
-  label: string
-  icon?: JSX.Element
-}
+  label: string;
+  icon?: JSX.Element;
+};
 
 export const TABS_MENU: TABS_MENU_PROPS[] = [
   {
-    label: 'unread',
-    icon: <EmailIcon />,
+    label: "unread",
+    icon: <MdOutlineEmail size={20} />,
   },
   {
-    label: 'all',
-    icon: <EmailIcon />,
+    label: "all",
+    icon: <MdOutlineEmail size={20} />,
   },
   {
-    label: 'expired',
-    icon: <TimerIcon />,
+    label: "expired",
+    icon: <TimerIcon size={20} />,
   },
   {
-    label: 'starred',
-    icon: <StarIcon />,
+    label: "starred",
+    icon: <MdStar size={20} />,
   },
-]
+];
 
 export const HELP_DESK_TABS_MENU: TABS_MENU_PROPS[] = [
   {
-    label: 'help desk',
+    label: "help desk",
   },
   {
-    label: 'questions',
+    label: "questions",
   },
-]
+];
 
 export const APPOINTMENT_TABLE_HEADER = [
-  'Name',
-  'RequestedTime',
-  'Added Time',
-  'Domain',
-]
+  "Name",
+  "RequestedTime",
+  "Added Time",
+  "Domain",
+];
 
-export const EMAIL_MARKETING_HEADER = ['Id', 'Email', 'Answers', 'Domain']
+export const EMAIL_MARKETING_HEADER = ["Id", "Email", "Answers", "Domain"];
 
 export const BOT_TABS_MENU: TABS_MENU_PROPS[] = [
   {
-    label: 'chat',
+    label: "chat",
     icon: <ChatIcon />,
   },
   {
-    label: 'helpdesk',
+    label: "helpdesk",
     icon: <HelpDeskIcon />,
   },
-]
+];

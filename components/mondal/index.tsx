@@ -25,7 +25,7 @@ const Modal = ({
   title,
   description,
   type,
-  logo,
+
 }: Props) => {
   switch (type) {
     case 'Integration':
@@ -36,7 +36,7 @@ const Modal = ({
             <div className="flex justify-center gap-3">
               <div className="w-12 h-12 relative">
                 <Image
-                  src={`https://ucarecdn.com/2c9bd4ab-1f00-41df-bad2-df668f65a232/`}
+                  src="/images/stripe.webp"
                   fill
                   alt="Corinna"
                 />
@@ -47,7 +47,7 @@ const Modal = ({
               </div>
               <div className="w-12 h-12 relative">
                 <Image
-                  src={`https://ucarecdn.com/${logo}/`}
+                  src="/images/logo.png"
                   fill
                   alt="Stripe"
                 />
