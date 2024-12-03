@@ -1,15 +1,12 @@
-// import { onGetSubscriptionPlan } from '@/actions/settings'
+import { onGetSubscriptionPlan } from '@/actions/settings'
 import React from 'react'
 import Section from '../section-label'
 import { Card, CardContent, CardDescription } from '../ui/card'
-import {  CheckCircle2, Plus } from 'lucide-react'
+import { CheckCircle2, Plus } from 'lucide-react'
 import { pricingCards } from '@/constants/landing-page'
-
-
-import Image from 'next/image'
-import { onGetSubscriptionPlan } from '@/actions/settings'
-import SubscriptionForm from './subscription-form'
 import Modal from '../mondal'
+import SubscriptionForm from '../forms/settings/subscription-form'
+import Image from 'next/image'
 
 
 
@@ -56,8 +53,7 @@ const BillingSettings = async () => {
             )
           }
         >
-          {/* <SubscriptionForm plan={plan!} /> */}
-          <div></div>
+          <SubscriptionForm plan={plan!} />
         </Modal>
       </div>
       <div className="lg:col-span-2">
